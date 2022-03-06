@@ -79,8 +79,74 @@ chrome.format: use "A3" for wider print, or use  "tabloid"
     - :page_with_curl: `:page_with_curl:`
     - :link: `:link:`
     - ❌ `:x:`
-    - 
+
+## List Level Demo
+
+- This is a list level 1
+    - this is a list level 2
+    - this is a list level 2
+        - this a list level 3
+- This is a list level 1
+
+1. This is a list level 1
+    - this is a list level 2
+        - this is a list level 3
+1. this is a list level 1
+    - this is a list level 2
+
+## Horizontal Line Demo
+
+---
+
+this is a demo
+
+----
+
+```
+(empty line)
+---
+(empty line)
+text
+(empty line)
+---
+(empty line)
+```
+
+***
+this is a demo
+***
+
+```
+
+***
+
+text
+
+***
+
+```
+
+## Code Demo
+
+- language: python, cmd, bash, diff, c, json
+
+``` {.line-numbers, highlight=[2,3,6-7]}
+import numpy, math
+a="this is a text"
+print (a)
+b=math.pi
+c=a+a
+for i in a
+    print(i)
+
+```
+
+```diff {.line-numbers}
+# this is a demo text
+config interface 1/1/line state donw
++ print ("this is done")
+- print ("this is not done") 
 
 
-
+```
 
