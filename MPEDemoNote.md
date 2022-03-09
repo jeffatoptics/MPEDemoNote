@@ -83,6 +83,16 @@ output:
     [comment]: # (This actually is the most platform independent comment)
     ```
     [comment]: # (this is a comment)
+
+1. markdown
+
+    [this is comment]: #
+
+    ```
+    [this is a comment]: #
+    ```
+
+
 1. footnote no referenced
     ```
     [^Comment]:  Text that will not appear in html source
@@ -99,6 +109,7 @@ output:
 - `&trade; &reg;`  Google&trade; &reg;Google
 - `&copy;` &copy;2002
 - `&raquo;&laquo;` &raquo; &laquo;
+- `&nbsp;&nbsp;&nbsp;&nbsp;` &nbsp;&nbsp;&nbsp;&nbsp;
 
 - positive signs: 
     - :+1: :100: :joy: :accept: :heart: :beer: :beers: :white_check_mark:
@@ -126,7 +137,7 @@ output:
     - :link: `:link:`
     - ❌ `:x:`
 
-## List Level Demo
+## List Level Demo {#section11}
 
 - This is a list level 1
     - this is a list level 2
@@ -146,7 +157,7 @@ output:
 
 this is a demo
 
-----
+---
 
 ```
 (empty line)
@@ -172,7 +183,83 @@ text
 
 ```
 
-## Code Demo
+## link demo
+
+- [demo the link within the doc](#horizontal-line-demo)
+
+```
+[demo the link within the doc](#horizontal-line-demo)
+```
+- [demo the link within the doc use the id](#section11)
+
+```
+[demo the link within the doc use the id](#id)
+id is using the #xxx{id}
+
+### My Great Heading {#custom-id}
+```
+
+- [demo the link to another file](./README.md)
+
+```
+[demo the link to another file](./README.md)
+```
+- [demo the link to another file](./README.md#mpedemonote)
+
+```
+- [demo the link to section in another file](./README.md#mpedemonote)
+
+```
+- [demo the external link](https://github.com/jeffatoptics/MPEDemoNote)
+
+- <https://github.com/jeffatoptics/MPEDemoNote>
+
+## html syntax
+
+- <mark> this is a mark</mark>
+- ==this is a mark==
+
+- <b>this is bold</b>
+- **bold**
+
+- <u> this is underline</u>
+- <ins>will be underlined</ins>
+
+- <i>this is italic</i>
+- _this is italic_
+
+- <s>test</s>
+- ~~test~~
+
+- <font color=red>test</font>
+- <p style="color:blue">Make this text blue.</p>
+
+- H<sub>2</sub>O
+- H~2~O
+
+- Y=X^2^
+
+- Y=X<sup>2</sup>
+
+- [x] task list
+
+- [ ] task list 
+
+## definition
+
+term
+: this is for a demo of definition
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+
+
+
+
+
+## Code Demo 
 
 - language: python, cmd, bash, diff, c, json
 
@@ -195,3 +282,69 @@ config interface 1/1/line state donw
 
 ```
 
+## Admonitions
+
+```
+> :warning: **Warning:** Do not push the big red button.
+
+> :memo: **Note:** Sunrises are beautiful.
+
+> :bulb: **Tip:** Remember to appreciate the little things in life.
+```
+> :warning: **Warning:** Do not push the big red button.
+
+> :memo: **Note:** Sunrises are beautiful.
+
+> :bulb: **Tip:** Remember to appreciate the little things in life.
+
+> :question: This is a question
+
+> :heavy_check_mark: success
+
+> :white_check_mark: success
+
+> :x: this is a failure
+
+!!!warning this is a warning
+    text to put
+
+!!!note this is a note
+    text to put
+
+!!!info this is an info
+    text to put    
+
+!!!abstract this is an abstract
+    text to put    
+
+!!!tip this is an info
+    text to put  
+
+!!! Success
+
+!!! Question
+
+!!! Failure
+
+!!! Danger
+
+!!! Bug
+
+!!! Example
+
+!!! Quote
+
+```
+ Note
+ Abstract
+ Inf
+ Tip
+ Success
+ Question
+ Warning
+ Failure
+ Danger
+ Bug
+ Example
+ Quote
+ ```  
