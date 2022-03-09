@@ -2,6 +2,8 @@
 chrome:
     printBackground: true
     format: "A4"
+html:
+    toc: true
 ---
 
 <!--- 
@@ -9,14 +11,58 @@ chrome.format: use "A3" for wider print, or use  "tabloid"
 --->
 
 
-# MPE Demo Note
+# MPE Demo Note {ignore}
 
-## Quick Reference
+[TOC]
+
+## Reference Link
 
 - [markdown guide](https://www.markdownguide.org/getting-started/)
 - [markdown preview enhanced](https://shd101wyy.github.io/markdown-preview-enhanced/#/)
 - [markdown cheat sheet](https://www.markdownguide.org/cheat-sheet/)
 - [markdown cheat sheet md file](https://www.markdownguide.org/assets/markdown-cheat-sheet.md)
+
+
+## settings 
+
+- chrome print settings
+
+```
+---
+chrome:
+    printBackground: true
+    format: "A4"
+---
+
+```
+- html output settings
+
+```
+---
+html:
+    embed_local_images: false
+    embed_svg: true
+    offline: false
+    toc: true
+    print_background: false
+---
+
+```
+
+- PanDoc Print Settings
+
+```
+---
+title: "this_is_title"
+author: author_name
+date: Jan 14, 2022
+output:	
+    word_document:
+        highlight: "tango"
+---
+
+```
+
 
 
 ## comment
@@ -52,13 +98,13 @@ chrome.format: use "A3" for wider print, or use  "tabloid"
 - `&le; &ge; &ne;` &le; &ge; &ne;
 - `&trade; &reg;`  Google&trade; &reg;Google
 - `&copy;` &copy;2002
-- `&raquo;` &raquo;
+- `&raquo;&laquo;` &raquo; &laquo;
 
 - positive signs: 
     - :+1: :100: :joy: :accept: :heart: :beer: :beers: :white_check_mark:
     - `:+1: :100: :joy: :accept: :heart: :beer: :beers: :white_check_mark:`
     - :ok: `:ok:`
-    - 
+    
 - neutral
     - :eyes: :alien: :confused:
     - `:eyes: :alien: :confused:`
@@ -146,7 +192,6 @@ for i in a
 config interface 1/1/line state donw
 + print ("this is done")
 - print ("this is not done") 
-
 
 ```
 
