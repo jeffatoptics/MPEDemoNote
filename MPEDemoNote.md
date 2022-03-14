@@ -4,6 +4,11 @@ chrome:
     format: "A4"
 html:
     toc: true
+
+toc:
+    depth_from: 2
+    depth_to: 6
+    ordered: false
 ---
 
 <!--- 
@@ -46,6 +51,14 @@ html:
     toc: true
     print_background: false
 ---
+
+---
+toc:
+  depth_from: 2
+  depth_to: 6
+  ordered: false
+---
+
 
 ```
 
@@ -440,14 +453,17 @@ gantt
 ```
 
 ```mermaid
-gantt
-    title A Gantt Diagram
-    dateFormat  YY-MM-DD
-    axisFormat   %y-%m-%d
-    section Section 1
-    A task           :done, a1, 21-12-01, 20d
-    Another task     :active, after a1, 60d
-    section Section 2
-    B      :crit,22-02-12, 20d
-    milestone: milestone,20d
-```
+sequenceDiagram
+    participant Local
+    participant Remote
+    Local-xRemote: LOS is detected
+    Note right of Remote: LOS will triger RFI
+    Remote->>Local: RFI
+    Local->>Remote: Idle 
+    Note left of Local: RFI will stop transmission <br> and triggers idle
+    
+    Local-->>Remote: LOS clear
+    Note right of Remote: idle is received <br> after LOS clear
+    Remote->>Local: Data
+    Local->>Remote: Data
+ ```
