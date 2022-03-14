@@ -304,6 +304,22 @@ config interface 1/1/line state donw
 - print ("this is not done") 
 
 ```
+```python {cmd=true}
+a="this is a demo"
+print ("begin:")
+for i in a:
+    print(i)
+print("end")
+```
+
+- use import
+
+@import "./testpy.py" {.line-numbers, highlight=[1,7-8]}
+
+@import "./testpy.py" {code_block=true class="line-numbers" line_begin=5 line_end=8}
+
+- import with code chunk
+@import "./testpy.py" {cmd="python"}
 
 
 ## Admonitions
@@ -452,8 +468,22 @@ gantt
     milestone: milestone,20d
 ```
 
+
+```mermaid{code_block=true}
+gantt
+    title A Gantt Diagram
+    dateFormat  YY-MM-DD
+    axisFormat   %y-%m-%d
+    section Section 1
+    A task           :done, a1, 21-12-01, 20d
+    Another task     :active, after a1, 60d
+    section Section 2
+    B      :crit,22-02-12, 20d
+    milestone: milestone,20d
+```
+
 ```mermaid
-sequenceDiagram
+sequenceDiagram 
     participant Local
     participant Remote
     Local-xRemote: LOS is detected
@@ -466,4 +496,53 @@ sequenceDiagram
     Note right of Remote: idle is received <br> after LOS clear
     Remote->>Local: Data
     Local->>Remote: Data
- ```
+```
+
+```mermaid {code_block=true}
+sequenceDiagram 
+    participant Local
+    participant Remote
+    Local-xRemote: LOS is detected
+    Note right of Remote: LOS will triger RFI
+    Remote->>Local: RFI
+    Local->>Remote: Idle 
+    Note left of Local: RFI will stop transmission <br> and triggers idle
+    
+    Local-->>Remote: LOS clear
+    Note right of Remote: idle is received <br> after LOS clear
+    Remote->>Local: Data
+    Local->>Remote: Data
+```
+
+
+## sequence
+sequence is similar to **mermaid** `sequenceDiagram`, but it supports hands style.
+
+```sequence {theme="hand"}
+    participant Local
+    participant Remote
+    Local-->Remote: LOS is detected
+    Note right of Remote: LOS will triger RFI
+    Remote->>Local: RFI
+    Local->>Remote: Idle 
+    Note left of Local: RFI will stop transmission \n and triggers idle
+    
+    Local-->>Remote: LOS clear
+    Note right of Remote: idle is received \n after LOS clear
+    Remote->>Local: Data
+    Local->>Remote: Data
+```
+
+## images
+
+-  import
+    @import "./images/sunflower.jpg"
+
+    @import "./images/sunflower.jpg" {width="100px" title="sunflower" alt="a sunflower under the blue sky"}
+
+- markdown
+    ![sunflower in blue sky](./images/sunflower.jpg)
+
+- html
+    <p align=center>
+    <img src="./images/sunflower.jpg" alt="this is sunflower under blue sky" width="300px"></img></p>
