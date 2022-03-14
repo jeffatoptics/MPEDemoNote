@@ -23,7 +23,7 @@ chrome.format: use "A3" for wider print, or use  "tabloid"
 - [markdown cheat sheet md file](https://www.markdownguide.org/assets/markdown-cheat-sheet.md)
 
 
-## settings 
+## Front settings 
 
 - chrome print settings
 
@@ -63,7 +63,20 @@ output:
 
 ```
 
+## Definition  
 
+GitHub
+    : GitHub is a website with Git tool
+
+## Abbreviation 
+*[YYDS]: Yong Yuan De Shen - God forever
+YYDS
+
+## footnote
+
+Demo[^1] a footnote
+
+[^1]: this a footnote
 
 ## comment
 
@@ -124,6 +137,7 @@ output:
     - :broken_heart: `:broken_heart:`
     - :bug: `:bug:`
 - Informational
+    - :memo:`:memo`
     - :question: `:question:`
     - :no_entry: :no_entry_sign:  `:no_entry: :no_entry_sign:`
     - :bookmark_tabs: :information_source: :warning: `:bookmark_tabs: :information_source: :warning:`
@@ -250,10 +264,6 @@ id is using the #xxx{id}
 term
 : this is for a demo of definition
 
-Second Term
-: This is one definition of the second term.
-: This is another definition of the second term.
-
 
 
 
@@ -281,6 +291,7 @@ config interface 1/1/line state donw
 - print ("this is not done") 
 
 ```
+
 
 ## Admonitions
 
@@ -331,10 +342,11 @@ config interface 1/1/line state donw
 !!! Bug
 
 !!! Example
-
+    
 !!! Quote
 
 ```
+
  Note
  Abstract
  Inf
@@ -347,4 +359,95 @@ config interface 1/1/line state donw
  Bug
  Example
  Quote
- ```  
+
+```  
+
+
+## Math 
+
+- [Math symbols](https://khan.github.io/KaTeX/function-support.html)
+
+- This is an inline equation: $ y=\sqrt{x^2-1} $ and $ y=\sqrt[4]{x^2-1} $
+- This is an equation block
+    $$
+    y=\frac{1}{2} \times \sqrt{x^2-1} \\
+    y=\cfrac{1}{2+\cfrac{1}{2}}     \\
+    y=\int \! (x^2-1) dx             \\
+    y=\int (x^2-1) dx                \\
+    y=\int_{a}^{b=10} (x^2-1) dx            \\
+    y=\sum_{x=1}^ {100} (x^2-1)- 1          \\
+    BER= erfc(\frac{Q}{\sqrt(2)})
+    $$
+ 
+$$
+\fbox {this is a demo equation: }   \\
+BER= erfc(\frac{Q}{\sqrt(2)})
+$$
+
+
+## mermaid
+
+```mermaid
+graph LR
+A(This is A)----->|this is demo text|B[(this is database<br><br> demo)]
+C((This is C))--this is demo text--->B
+D{This is D}--this is demo text--->B
+
+    subgraph box
+        A---C----D
+        subgraph newbox
+        C
+        D
+        end
+    end
+    subgraph box2
+    B
+    end
+style B fill:#bbf,stroke:#000,stroke-width:4px,color:#f00,stroke-dasharray: 10 2
+linkStyle 0 stroke:#f00,stroke-width:4px
+```
+
+```mermaid
+flowchart LR
+A<==>B<-..->C
+A[this is a text]
+B[this is demo]
+style B fill:#bbf
+
+```
+
+```mermaid
+pie
+    title Bugs in Software
+    "transmission" : 15.00
+    "alarm" : 25
+    "management" : 66
+    "performance" : 5
+```
+
+
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat  YY-MM-DD
+    axisFormat   %y-%m-%d
+    section Section 1
+    A task           :done, a1, 21-12-01, 20d
+    Another task     :active, after a1, 60d
+    section Section 2
+    B      :crit,22-02-12, 20d
+    milestone: milestone,20d
+```
+
+```mermaid
+gantt
+    title A Gantt Diagram
+    dateFormat  YY-MM-DD
+    axisFormat   %y-%m-%d
+    section Section 1
+    A task           :done, a1, 21-12-01, 20d
+    Another task     :active, after a1, 60d
+    section Section 2
+    B      :crit,22-02-12, 20d
+    milestone: milestone,20d
+```
