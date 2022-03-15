@@ -36,7 +36,7 @@ chrome.format: use "A3" for wider print, or use  "tabloid"
 ---
 chrome:
     printBackground: true
-    format: "A4"
+    format: "A4" "tabloid" "A3"
 ---
 
 ```
@@ -124,7 +124,11 @@ Demo[^1] a footnote
     [^Comment]:  Text that will not appear in html source
     ```
     [^Comment]:  Text that will not appear in html source
-    
+## task
+
+- [ ] task 1 
+- [x] task 1 
+
 ## emoji and html symbol
 - Reference link: [html symbol](https://www.toptal.com/designers/htmlarrows/)
 
@@ -319,7 +323,32 @@ print("end")
 @import "./testpy.py" {code_block=true class="line-numbers" line_begin=5 line_end=8}
 
 - import with code chunk
+
 @import "./testpy.py" {cmd="python"}
+
+>:memo:Option name: enableScriptExecution
+
+
+
+```bash {cmd=true hide=true}
+pwd 
+ls -l
+```
+
+```python {cmd=true matplotlib=true modify_source=false args=["-X","utf8"]}
+
+import matplotlib.pyplot as plt
+import numpy as np
+x=np.arange(0,40,0.1)
+y=np.sin(x)
+plt.plot(x,y)
+plt.show() # show figure
+
+```
+>:bulb: **Tips**  
+    use `modify_source=true` to check what is the error output if print is abnormal.
+    "python -X utf8" force the MPE program to open file with utf8 in windows system
+
 
 
 ## Admonitions
@@ -546,3 +575,17 @@ sequence is similar to **mermaid** `sequenceDiagram`, but it supports hands styl
 - html
     <p align=center>
     <img src="./images/sunflower.jpg" alt="this is sunflower under blue sky" width="300px"></img></p>
+
+## tables
+
+| item1 | attribute 1 | attribute 2 | attribute 3 |
+|:------|:------------|:------------|:------------|
+| aa    | bb          | cc          | dd          |
+
+
+
+| item1 | attribute 1 | attribute 2 | attribute 3 |
+|:------|:------------|:------------|:------------|
+| aa    | bb          | cc          | dd          |
+| ^     | ee          | ff          | gg          |
+|   a   | hh          |             | ii          |
