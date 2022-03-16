@@ -262,7 +262,7 @@ id is using the #xxx{id}
 - <s>test</s>
 - ~~test~~
 
-- <font color=red>test</font>
+- <font color=red>test font as red</font>
 - <p style="color:blue">Make this text blue.</p>
 
 - H<sub>2</sub>O
@@ -276,11 +276,25 @@ id is using the #xxx{id}
 
 - [ ] task list 
 
+>:bulb: Tips for center the text
+```
+<center>This text is centered.</center>
+<p style="text-align:center">Center this text</p>
+```
+
+<center>This text is centered.</center>
+<p style="text-align:center">Center this text</p>
+
+
+
 ## definition
 
 term
 : this is for a demo of definition
 
+term2
+: this is for a demo of definition
+: another definition for term2
 
 
 
@@ -550,7 +564,7 @@ sequence is similar to **mermaid** `sequenceDiagram`, but it supports hands styl
 ```sequence {theme="hand"}
     participant Local
     participant Remote
-    Local-->Remote: LOS is detected
+    Local->Remote: LOS is detected
     Note right of Remote: LOS will triger RFI
     Remote->>Local: RFI
     Local->>Remote: Idle 
@@ -575,6 +589,22 @@ sequence is similar to **mermaid** `sequenceDiagram`, but it supports hands styl
 - html
     <p align=center>
     <img src="./images/sunflower.jpg" alt="this is sunflower under blue sky" width="300px"></img></p>
+
+- more complex html
+
+```
+<figure>
+    <img src="/images/sunflower.jpg"
+         alt="this is sunflower under blue sky">
+    <figcaption> This Is Sunflower under blue sky</figcaption>
+</figure>
+```
+
+<figure>
+    <img src="./images/sunflower.jpg"
+         alt="this is sunflower under blue sky" width="300px">
+    <figcaption> Sunflower under Blue Sky</figcaption>
+</figure>
 
 ## tables
 
