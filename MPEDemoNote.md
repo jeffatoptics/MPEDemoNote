@@ -140,7 +140,7 @@ Demo[^1] a footnote
 - `&copy;` &copy;2002
 - `&raquo;&laquo;` &raquo; &laquo;
 - `&nbsp;&nbsp;&nbsp;&nbsp;` &nbsp;&nbsp;&nbsp;&nbsp;
-
+- `&#8800;`  &#8800;
 - positive signs: 
     - :+1: :100: :joy: :accept: :heart: :beer: :beers: :white_check_mark:
     - `:+1: :100: :joy: :accept: :heart: :beer: :beers: :white_check_mark:`
@@ -160,6 +160,7 @@ Demo[^1] a footnote
     - :bookmark_tabs: :information_source: :warning: `:bookmark_tabs: :information_source: :warning:`
     - :arrow_right: :arrow_left: :arrow_up: :arrow_down: `:arrow_right: :arrow_left: :arrow_up: :arrow_down`
     - :ballot_box_with_check:`:ballot_box_with_check:`
+    - &#9744;&#9745;&#9746;`&#9744; &#9745;&#9746;`
     - &rarr; &larr; &uarr; &darr; `&rarr; &larr; &uarr; &darr;`
     - :bangbang: `:bangbang: `
     - :boom: `:boom:`
@@ -167,6 +168,7 @@ Demo[^1] a footnote
     - :page_with_curl: `:page_with_curl:`
     - :link: `:link:`
     - ❌ `:x:`
+    
 
 ## List Level Demo {#section11}
 
