@@ -172,6 +172,15 @@ Demo[^1] a footnote
     - &#9702; `&#9702;` &#9726; `&#9726;`
     - &#9724; 	&#10148; &#10147; 	&#8680;&#11044;&#9658;
 
+- [git moji](https://gitmoji.dev/)
+    - :memo: for doc update
+    - :bug: for bug fix
+    - :tada: for new project
+    - :sparkles: for new features
+    - :poop: bad code for future improvement
+    - :pencil2: typos corrected
+    - :writing_hand: :star: minor update 
+    
 ## List Level Demo {#section11}
 
 - This is a list level 1
