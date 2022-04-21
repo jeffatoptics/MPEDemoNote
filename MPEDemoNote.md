@@ -488,13 +488,13 @@ plt.show() # show figure
     y=\int (x^2-1) dx                \\
     y=\int_{a}^{b=10} (x^2-1) dx            \\
     y=\sum_{x=1}^ {100} (x^2-1)- 1          \\
-    BER= erfc(\frac{Q}{\sqrt(2)})
+    BER= erfc(\frac{Q}{\sqrt{2}})
     $$
 
 
 $$
-\fbox {this is a demo equation: }   \\
-BER= erfc(\frac{Q}{\sqrt(2)})
+\fbox {this is a demo equation:}   \\
+BER= erfc(\frac{Q}{\sqrt{2}})
 $$
 
 
@@ -532,7 +532,7 @@ style B fill:#bbf
 ```mermaid
 pie
     title Bugs in Software
-    "transmission" : 15.00
+    "transmission" : 15
     "alarm" : 25
     "management" : 66
     "performance" : 5
