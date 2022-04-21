@@ -298,6 +298,33 @@ id is using the #xxx{id}
 <center>This text is centered.</center>
 <p style="text-align:center">Center this text</p>
 
+### two columns with the demo
+
+- this is demo to 2 columns
+
+<div style="columns: 2;">
+
+The project presents the markdown templates for MPE (Markdown Preview Enhanced) extension to generate PDF pages with header, footer and page break via with Chrome (puppeteer). The settings are demonstrated in the front matter of markdown file.
+
+Editor and extension are listed as following:
+
+</div>
+### page break
+
+```
+
+<!---->
+
+
+```
+
+### ruby note
+
+<ruby>饕餮 <rt>tāo tiè</rt></ruby> 
+
+<ruby>1830 <rt>Beer</rt></ruby> 
+
+[  ā, á, ǎ, à, ō, ó, ǒ, ò, ê, ê̄, ế, ê̌, ề, ē, é, ě, è, ī, í, ǐ, ì, ū, ú, ǔ, ù, ü, ǖ, ǘ, ǚ, ǜ, m̄, ḿ, m̀, ń, ň, ǹ, ẑ, ĉ, ŝ, ŋ
 
 
 ## definition
@@ -463,7 +490,8 @@ plt.show() # show figure
     y=\sum_{x=1}^ {100} (x^2-1)- 1          \\
     BER= erfc(\frac{Q}{\sqrt(2)})
     $$
- 
+
+
 $$
 \fbox {this is a demo equation: }   \\
 BER= erfc(\frac{Q}{\sqrt(2)})
