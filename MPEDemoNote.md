@@ -599,6 +599,47 @@ sequenceDiagram
 ```
 
 
+```mermaid {code_block=true}
+%%{init: {'theme':'default'}}%%
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
+
+```mermaid {code_block=true}
+%%{init: {'theme':'forest', 'themeVariables': { 'lineColor': 'green' }}}%%
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+<div class="mermaid">
+%%{init: {'theme':'forest', 'themeVariables': { 'lineColor': 'green' }}}%%
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
+
+```
+<div class="mermaid">
+%%{init: {'theme':'forest', 'themeVariables': { 'lineColor': 'green' }}}%%
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+<div>
+```
+
+```
+
+
 ## sequence
 sequence is similar to **mermaid** `sequenceDiagram`, but it supports hands style.
 
